@@ -14,7 +14,7 @@ def handle_keyboard_key_press(key):
 
         # Right click in case you need to deselect a currently selected plant
         # This tuple may need to be changed if not running at 1920x1080, see below on how to change this
-        mouse.position = (241, 0)
+        mouse.position = mouse_zero_tuple
         mouse.press(Button.right)
         mouse.release(Button.right)
 
@@ -46,6 +46,8 @@ mouse_position_dict = {
     "9": (1175, 70),
     "0": (1270, 70)
 }
+# A position for the mouse to right click, potentially deselecting the current selected plant
+mouse_zero_tuple = (241, 0)
 
 # Init the mouse
 mouse = Controller()
